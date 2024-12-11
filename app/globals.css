@@ -14,8 +14,64 @@
   }
 }
 
+@layer utilities {
+  .drop-shadow-neon {
+    text-shadow: 0 0 5px rgba(78, 205, 196, 0.8),
+      0 0 10px rgba(78, 205, 196, 0.6),
+      0 0 20px rgba(78, 205, 196, 0.4);
+  }
+  .drop-shadow-red {
+    text-shadow: 0 0 5px rgba(255, 8, 0, 0.8),
+      0 0 10px rgba(254, 39, 39, 0.6),
+      0 0 20px rgba(255, 0, 0, 0.4);
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in {
+    animation: slide-in 1s ease-out;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  
+  margin: 0;
+  padding: 0;
+
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: url('/debes.png');
+  background-position: center; 
+  background-size: cover;
+
+}
+
+.main2 {
+  margin-top: 75px;
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.594);
+  color: rgb(56, 255, 255);
+  box-sizing: border-box;
 }
