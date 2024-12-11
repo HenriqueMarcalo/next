@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Product } from "../models/interfaces";
 
@@ -11,35 +10,33 @@ export default function Card({
   rating,
 }: Product) {
   return (
-    <section className="bg-white border rounded-xl shadow-xl hover:shadow-xl transition-transform duration-300 hover:-translate-y-2 flex flex-col w-45">
-      {/* Imagem do Produto */}
-      <article className="overflow-hidden rounded-t-lx pt-10">
+    <section className="bg-[#0a0a0a88] border-none rounded-xl shadow-2xl hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2 flex flex-col">
+      {/* Product Image */}
+      <article className="overflow-hidden rounded-t-xl pt-10 bg-[#181616]">
         <img
           src={image}
           alt={title}
-          className="w-full h-[2rem] object-contain"
+          className="w-full h-50 object-contain"
         />
       </article>
-
-      {/* Corpo do Card */}
+      {/* Card Body */}
       <article className="p-4 flex-grow">
-        <h2 className="text-[1rem] font-bold text-red-300">
+        <h2 className="text-lg font-bold text-[#4ECDC4] drop-shadow-neon">
           {title}
         </h2>
-        <p className="text-[0.6rem] text-red-500 italic font-bold pb-2">
+        <p className="text-sm text-[#4ECDC4] italic font-bold pb-2">
           {category}
         </p>
-        <p className="text-[0.4rem] text-gray-900">
+        <p className="text-sm text-[#ededed]">
           {description}
         </p>
       </article>
-
-      {/* Rodapé do Card */}
-      <article className="p-4 border-t flex justify-between items-center">
-        <span className="text-[0.6rem] font-bold text-red-500">
+      {/* Card Footer */}
+      <article className="p-4 border-t border-[#4ECDC4] flex justify-between items-center">
+        <span className="text-lg font-bold text-[#4ECDC4] drop-shadow-neon">
           {price.toFixed(2)}€
         </span>
-        <article className="text-[0.6rem] text-yellow-500 flex items-center">
+        <article className="text-sm text-[#4ECDC4] flex items-center">
           {rating.rate}⭐{" "}
           <span className="text-gray-400 ml-2">({rating.count})</span>
         </article>
